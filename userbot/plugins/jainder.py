@@ -5,19 +5,19 @@ from telethon import events
 import random
 import asyncio
 
-@borg.on(events.NewMessage(pattern=r"\.jainder(.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.gender(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
     if input_str in "ex":
         emoticons = [
-            "u is mard",
-            "u is man",
-            "u is aurat",
-            "u is woman",
-            "u is gey",
-            "u is chakka",
+            "you are mard",
+            "you are man",
+            "you are aurat",
+            "you are woman",
+            "you are gey",
+            "you are chakka",
         ]
     elif input_str in "thinking":
         emoticons = [
