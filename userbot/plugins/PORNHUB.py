@@ -77,25 +77,31 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "amore":
+    if input_str == "dbx":
 
         await event.edit(input_str)
 
         animation_chars = [
 
-            "A_",
+            "D_",
 
-            "AM_",
+            "DA_",
 
-            "AMO_",
+            "DAR_",
 
-            "AMOR_",
+            "DARK_",
             
-            "AMORE_",
+            "DARKB_",
             
-            "AMORE❤_",
+            "DARKBE_",
             
-            ".-.",
+            "DARKBEA_",
+            
+            "DARKBEAS_",
+            
+            "DARKBEAST_",
+            
+            "DARKBEAST",
 
         ]
 
