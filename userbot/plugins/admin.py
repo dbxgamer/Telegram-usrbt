@@ -34,7 +34,7 @@ from userbot.utils import register, errors_handler, admin_cmd
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
 NO_ADMIN = "`I am not an admin nub nibba!`"
-NO_PERM = "`I don't have sufficient permissions! This is so sed. Alexa play despacito`"
+NO_PERM = "`I don't have sufficient permissions! This is so sed. Suicide pigeon!`"
 NO_SQL = "`Running on Non-SQL mode!`"
 
 CHAT_PP_CHANGED = "`Chat Picture Changed`"
@@ -135,7 +135,7 @@ async def promote(promt):
     await promt.edit("`Promoting...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "admeme"  # Just in case.
+        rank = "admin"  # Just in case.
     if user:
         pass
     else:
@@ -145,7 +145,7 @@ async def promote(promt):
     try:
         await promt.client(
             EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Promoted Successfully! Now gib Party`")
+        await promt.edit("`Promoted Successfully! Now gib 1k bucks`")
 
     # If Telethon spit BadRequestError, assume
     # we don't have Promote permission
@@ -176,7 +176,7 @@ async def demote(dmod):
 
     # If passing, declare that we're going to demote
     await dmod.edit("`Demoting...`")
-    rank = "admeme"  # dummy rank, lol.
+    rank = "admin"  # dummy rank, lol.
     user = await get_user_from_event(dmod)
     user = user[0]
     if user:
@@ -201,7 +201,7 @@ async def demote(dmod):
     except BadRequestError:
         await dmod.edit(NO_PERM)
         return
-    await dmod.edit("`Demoted this retard Successfully!`")
+    await dmod.edit("`Aage se right, waha se fuckoff. Demoted!!`")
 
     # Announce to the logging group if we have demoted successfully
     if BOTLOG:
@@ -366,7 +366,7 @@ async def promote(promt):
     try:
         await promt.client(
             EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Promoted Successfully! Now gib Party`")
+        await promt.edit("`Promoted Successfully! Now gib 1k bucks`")
 
     # If Telethon spit BadRequestError, assume
     # we don't have Promote permission
@@ -459,7 +459,7 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        await show.edit("`I am not an admin here!`")
+        await show.edit("`I am not an admin here! Creator help!!`")
         return
 
     await show.edit("`Deleting deleted accounts...\nOh I can do that?!?!`")
